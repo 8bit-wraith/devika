@@ -152,11 +152,8 @@ def get_terminal_session():
 @app.route("/api/run-code", methods=["POST"])
 @route_logger(logger)
 def run_code():
-    data = request.json
-    project_name = data.get("project_name")
-    code = data.get("code")
     # TODO: Implement code execution logic
-    return jsonify({"message": "Code execution started"})
+    return jsonify({"error": "Code execution is not implemented"}), 501
 
 
 @app.route("/api/calculate-tokens", methods=["POST"])
